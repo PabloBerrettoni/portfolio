@@ -1,38 +1,71 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+  background-color: #282c34;
   color: white;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  min-height: 5vh;
+}
+main {
+  width: 100%;
+  min-height: 90vh;
+}
+footer {
+  width: 100%;
+  min-height: 5vh;
+}
+
+.About {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.About img {
+  width: 25%;
+}
+.TextDescription {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Projects {
+  width: 100%;
+}
+.ProjectList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.IndividualProject {
+  width: 35%;
+}
+
+.Contact {
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0
+  ;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
