@@ -1,34 +1,20 @@
+# Use lightweight nginx
 FROM nginx:alpine
 
-# Install certbot & tools
-RUN apk add --no-cache certbot openssl bash curl
-
 LABEL maintainer="Pablo Berrettoni <pabloberrettoni98@gmail.com>"
-LABEL description="Portfolio website for Pablo Berrettoni with HTTPS support"
+LABEL description="Portfolio website for Pablo Berrettoni"
 
+# Set working directory
 WORKDIR /usr/share/nginx/html
 
 # Copy site files
 COPY index.html style.css resume-PabloBerrettoni.pdf ./
 
-# Copy nginx config
+# Copy nginx default config (optional, basic static server)
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# Copy certificate renewal script
-COPY renew.sh /renew.sh
-RUN chmod +x /renew.sh
+# Expose HTTP port
+EXPOSE 80
 
-# Create mount point for cert persistence
-VOLUME ["/etc/letsencrypt"]
-
-# Expose ports
-EXPOSE 80 443
-
-# Start script: get certs if missing, then run nginx + certbot renew loop
-CMD ["/bin/sh", "-c", "\
-    if [ ! -f /etc/letsencrypt/live/pabloberrettoni.com/fullchain.pem ]; then \
-      certbot certonly --standalone --non-interactive --agree-tos \
-      -m pabloberrettoni98@gmail.com -d pabloberrettoni.com -d www.pabloberrettoni.com; \
-    fi && \
-    ( /renew.sh & ) && \
-    nginx -g 'daemon off;'"]
+# Run nginx in foreground
+CMD ["nginx", "-g", "daemon off;"]
