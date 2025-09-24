@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  color: #111;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  width: 90%;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Social buttons */
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #111;
+  border-radius: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background-color: #111;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.btn svg.icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+  fill: currentColor;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Skills using Flex */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills > div {
+  flex: 1 1 40%;
+}
+
+/* Experience & Projects */
+.experience-item,
+.project-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .skills > div { flex: 1 1 100%; }
+}
+
+.resume-download {
+  margin-top: 1rem;
+}
+
+.resume-download .btn {
+  background-color: #0a74da;
+  color: #fff;
+  border-color: #0a74da;
+}
+
+.resume-download .btn:hover {
+  background-color: #095bb5;
+  border-color: #095bb5;
+  transform: scale(1.05);
+}
