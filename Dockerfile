@@ -12,7 +12,7 @@ WORKDIR /usr/share/nginx/html
 COPY index.html style.css resume-PabloBerrettoni.pdf ./
 
 # Copy nginx config
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy certificate renewal script
 COPY renew.sh /renew.sh
