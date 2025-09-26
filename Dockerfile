@@ -1,7 +1,7 @@
 FROM docker.io/library/nginx:alpine
 
 WORKDIR /usr/share/nginx/html
-COPY index.html style.css resume-PabloBerrettoni.pdf ./
+COPY index.html style.css resume-PabloBerrettoni.pdf profile.png ./
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
