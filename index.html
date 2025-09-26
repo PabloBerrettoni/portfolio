@@ -1,124 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pablo Berrettoni - DevOps</title>
-  
-  <!-- SEO meta tags -->
-  <meta name="description" content="Pablo Berrettoni - DevOps Specialist & Full Stack Developer. Expertise in Kubernetes, AWS, GCP, Terraform, Helm, GitOps, and cloud automation.">
-  <meta name="keywords" content="DevOps, Kubernetes, AWS, GCP, Terraform, Helm, GitOps, Automation, Full Stack">
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pablo Berrettoni — DevOps</title>
+  <meta name="description" content="Pablo Berrettoni — DevOps Specialist. Kubernetes, Terraform, GitOps, GCP, AWS, ArgoCD, Helm, automation." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main>
-    <!-- Header -->
-    <header>
-      <h1>Pablo Berrettoni</h1>
-      <p>DevOps Specialist & Full Stack Developer</p>
-      <div class="social">
-        <a href="mailto:pabloberrettoni98@gmail.com" class="btn">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm18 2H4v1.5l8 5 8-5V6zm0 12V9l-8 5-8-5v9h16z"/></svg>
-          Email
-        </a>
-        <a href="https://github.com/PabloBerrettoni" target="_blank" class="btn">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.112.82-.26.82-.577v-2.234c-3.338.725-4.033-1.61-4.033-1.61-.546-1.386-1.333-1.755-1.333-1.755-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.305-5.467-1.335-5.467-5.933 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.288-1.552 3.293-1.23 3.293-1.23.654 1.653.243 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.624-5.48 5.922.43.372.823 1.106.823 2.23v3.307c0 .319.217.694.825.576C20.565 21.796 24 17.296 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/pablo-berrettoni" target="_blank" class="btn">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764c.967 0 1.75.79 1.75 1.764s-.783 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.338-.026-3.064-1.867-3.064-1.868 0-2.154 1.46-2.154 2.97v5.698h-3v-10h2.879v1.367h.041c.401-.761 1.379-1.563 2.837-1.563 3.033 0 3.595 1.997 3.595 4.59v5.606z"/></svg>
-          LinkedIn
-        </a>
+  <main class="container">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-left">
+        <img class="avatar" src="profile.png" alt="Pablo Berrettoni photo (replace)" />
+        <div class="title">
+          <h1>Pablo Berrettoni</h1>
+          <p class="subtitle">DevOps Specialist · Cloud & GitOps · Kubernetes Engineer</p>
+        </div>
+        <div class="contact-row">
+          <a class="chip" href="mailto:pabloberrettoni98@gmail.com">pabloberrettoni98@gmail.com</a>
+          <a class="chip" href="https://github.com/PabloBerrettoni" target="_blank" rel="noopener">github.com/PabloBerrettoni</a>
+          <a class="chip" href="https://linkedin.com/in/pablo-berrettoni" target="_blank" rel="noopener">linkedin.com/in/pablo-berrettoni</a>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="resume-PabloBerrettoni.pdf" download>Download Resume</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
       </div>
 
-      <!-- Download Resume Button -->
-      <div class="resume-download">
-        <a href="resume-PabloBerrettoni.pdf" download class="btn">
-          Download Resume
-        </a>
+      <div class="hero-right">
+        <div class="summary card">
+          <h2>Quick summary</h2>
+          <p>DevOps Specialist with 3+ years building automated cloud infrastructure, GitOps pipelines, and resilient Kubernetes platforms. Strong IaC experience with Terraform, Helm and GitOps tools like ArgoCD and Atlantis.</p>
+        </div>
+
+        <div class="infra-snapshot card">
+          <button class="copy-btn" onclick="copyCode(this)">📋</button>
+          <pre><code class="term">echo "SGVsbG8gYW5kIHdlbGNvbWUgdG8gbXkgcG9ydGZvbGlvIQ==" | base64 --decode</code></pre>
+        </div>
       </div>
     </header>
 
-    <!-- Professional Summary -->
-    <section class="card">
-      <h2>Professional Summary</h2>
-      <p>DevOps Specialist with 3+ years in cloud infrastructure, automation, and full-stack development. Experienced in GitOps methodologies, multi-cloud environments (AWS, GCP), and Infrastructure as Code.</p>
-    </section>
-
-    <!-- Technical Skills -->
-    <section class="card">
-      <h2>Technical Skills</h2>
-      <div class="skills">
-        <div><strong>Cloud:</strong> AWS, GCP</div>
-        <div><strong>IaC:</strong> Terraform, Helm, Atlantis</div>
-        <div><strong>Containers:</strong> Docker, Kubernetes</div>
-        <div><strong>DevOps Tools:</strong> ArgoCD, Airflow</div>
-        <div><strong>Automation:</strong> Shell, Ansible, Python</div>
-        <div><strong>Development:</strong> MEVN, LAMP</div>
+    <!-- SKILLS -->
+    <section id="skills" class="card skills">
+      <h2>Core skills</h2>
+      <div class="badges">
+        <span class="badge">Kubernetes (GKE / EKS)</span>
+        <span class="badge">Terraform (modules)</span>
+        <span class="badge">GitOps · ArgoCD · Atlantis</span>
+        <span class="badge">Helm & Charts</span>
+        <span class="badge">Docker & Containers</span>
+        <span class="badge">AWS (S3 · Lambda · Backup)</span>
+        <span class="badge">GCP (GKE)</span>
+        <span class="badge">Ansible · Shell · Python</span>
+        <span class="badge">Airflow · CI/CD</span>
       </div>
     </section>
 
-    <!-- Professional Experience -->
-    <section class="card experience">
-      <h2>Professional Experience</h2>
-      <div class="experience-item">
-        <h3>DevOps Specialist - PukaraIT</h3>
-        <p><small>Oct 2024 - Present</small></p>
-        <ul>
-          <li>Implemented GitOps with Terraform, ArgoCD, Atlantis</li>
-          <li>Managed GKE & EKS environments</li>
-          <li>Disaster recovery & automation with AWS S3, Lambda, Step Functions</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>DevOps Specialist - EzzyNetworks</h3>
-        <p><small>May 2023 - Oct 2024</small></p>
-        <ul>
-          <li>Deployed Airflow on Kubernetes</li>
-          <li>Automated tasks with Shell, Ansible, Python</li>
-          <li>Optimized Kubernetes node capacity</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>Full Stack Developer - PukaraIT</h3>
-        <p><small>Jan 2022 - Apr 2023</small></p>
-        <ul>
-          <li>Developed MEVN & LAMP stack projects</li>
-          <li>Dockerized apps & deployed with Terraform</li>
-          <li>Collaborated with cross-functional teams</li>
-        </ul>
+    <!-- PROJECTS -->
+    <section id="projects" class="card projects">
+      <h2 class="projects-title">Selected projects</h2>
+      <div class="flex">
+        <article class="project">
+          <h3>infra-oracle</h3>
+          <p>Infrastructure on wich this same site is running! This project provides Infrastructure as Code (IaC) for deploying and managing cloud resources on Oracle Cloud Infrastructure (OCI) using Terraform. It features a modular architecture, supports CI/CD with GitHub Actions, and leverages Oracle Cloud's Always Free tier.</p>
+          <div class="tags">
+            <span>Cloud</span><span>Terraform</span><span>OCI</span><span>GitHub Actions</span><span>IaC</span><span>CI/CD</span><span>Networking</span>
+          </div>
+          <a class="btn ghost" href="https://github.com/PabloBerrettoni/infra-oracle" target="_blank" rel="noopener">View Repo</a>
+        </article>
+
+        <article class="project">
+          <h3>portfolio</h3>
+          <p>Source code of my personal portfolio: static HTML/CSS, Docker + Nginx setup, resume hosting and CI/CD pipeline for building and pushing the docker image.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>Docker</span><span>Static Site</span><span>GitHub Actions</span><span>CI/CD</span>
+          </div>
+          <a class="btn ghost" href="https://github.com/PabloBerrettoni/portfolio" target="_blank" rel="noopener">View Repo</a>
+        </article>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section class="card projects">
-      <h2>Projects & Portfolio</h2>
-      <div class="project-item">
-        <h3>Multi-Cloud Disaster Recovery</h3>
-        <p>Designed and implemented DR strategies using AWS S3 cross-region replication, Lambda automation, and GCP backup storage.</p>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card timeline">
+      <h2>Experience</h2>
+
+      <div class="time-item">
+        <div class="time-left">Oct 2024 — July 2025</div>
+        <div class="time-right">
+          <h4>DevOps Specialist · PukaraIT</h4>
+          <p>Implemented GitOps with Terraform, ArgoCD and Atlantis. Managed GKE/EKS, created disaster recovery strategies, and modular Terraform designs. Created, deployed and maintained helm packages.</p>
+        </div>
       </div>
-      <div class="project-item">
-        <h3>GitOps with ArgoCD & Terraform</h3>
-        <p>Created reusable Terraform modules and Helm charts, automated deployments with ArgoCD, and standardized workflows with Atlantis.</p>
+
+      <div class="time-item">
+        <div class="time-left">May 2023 — Oct 2024</div>
+        <div class="time-right">
+          <h4>DevOps Specialist · EzzyNetworks</h4>
+          <p>Deployed Airflow on Kubernetes, automated ops with Shell/Ansible/Python, managed large kubernetes cluster and optimized node capacity.</p>
+        </div>
       </div>
-      <div class="project-item">
-        <h3>Kubernetes Workflow Automation</h3>
-        <p>Deployed and managed Apache Airflow on Kubernetes to orchestrate pipelines for data processing and infrastructure tasks.</p>
+
+      <div class="time-item">
+        <div class="time-left">Jan 2022 — Apr 2023</div>
+        <div class="time-right">
+          <h4>Full Stack Developer · PukaraIT</h4>
+          <p>Built MEVN / LAMP apps, containerized services and deployed with Terraform-managed infrastructure.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Education -->
-    <section class="card">
-      <h2>Education</h2>
-      <ul>
-        <li>Bachelor's in Systems - UNGS</li>
-        <li>Full Stack Development - Digital House</li>
-        <li>C1 Advanced English - British Cultural College</li>
-      </ul>
+    <!-- CONTACT -->
+    <section id="contact" class="card contact">
+      <h2>Let's work together</h2>
+      <p>If you'd like to chat about a role or a project, email me or open a quick call.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:pabloberrettoni98@gmail.com">
+          <strong>Email</strong>
+          <span>pabloberrettoni98@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://github.com/PabloBerrettoni" target="_blank" rel="noopener">
+          <strong>GitHub</strong>
+          <span>github.com/PabloBerrettoni</span>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/pablo-berrettoni" target="_blank" rel="noopener">
+          <strong>LinkedIn</strong>
+          <span>linkedin.com/in/pablo-berrettoni</span>
+        </a>
+      </div>
     </section>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+      <small>© Pablo Berrettoni — DevOps</small>
+    </footer>
   </main>
+
+  <script>
+    function copyCode(btn) {
+      const code = btn.nextElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        btn.innerText = "✔"; // temporary feedback
+        setTimeout(() => btn.innerText = "📋", 1000);
+      }).catch(err => {
+        console.error("Failed to copy: ", err);
+      });
+    }
+  </script>
 </body>
 </html>
