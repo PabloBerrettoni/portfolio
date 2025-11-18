@@ -98,7 +98,12 @@
         </div>
 
         <div class="infra-snapshot card">
-          <button class="copy-btn" onclick="copyCode(this)">📋</button>
+          <button class="copy-btn" onclick="copyCode(this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+            </svg>
+          </button>
           <pre><code class="term">echo "SGVsbG8gYW5kIHdlbGNvbWUgdG8gbXkgcG9ydGZvbGlvIQ==" | base64 --decode</code></pre>
         </div>
       </div>
@@ -154,6 +159,30 @@
           </div>
           <a class="btn ghost" href="https://github.com/PabloBerrettoni/portfolio" target="_blank" rel="noopener">View
             Repo</a>
+        </article>
+
+        <article class="project">
+          <h3>srt-translate</h3>
+          <p>A tool for translating subtitle files (SRT format) using various translation APIs and services. Automate subtitle translation workflows with support for multiple languages and translation backends.</p>
+          <div class="tags">
+            <span>Python</span><span>Translation</span><span>SRT</span><span>Automation</span>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <a class="btn ghost" href="https://translate.pabloberrettoni.com/" target="_blank"
+              rel="noopener">View Project</a>
+            <a class="btn ghost" href="https://github.com/PabloBerrettoni/srt-translate" target="_blank"
+              rel="noopener">View Repo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Ansible-technical-interview</h3>
+          <p>A comprehensive technical interview project showcasing Ansible expertise. Demonstrates playbooks, roles, and best practices for infrastructure automation and configuration management.</p>
+          <div class="tags">
+            <span>Ansible</span><span>IaC</span><span>Automation</span><span>Configuration Management</span>
+          </div>
+          <a class="btn ghost" href="https://github.com/PabloBerrettoni/Ansible-technical-interview" target="_blank"
+            rel="noopener">View Repo</a>
         </article>
       </div>
     </section>
@@ -219,8 +248,10 @@
     function copyCode(btn) {
       const code = btn.nextElementSibling.innerText;
       navigator.clipboard.writeText(code).then(() => {
-        btn.innerText = "✔"; // temporary feedback
-        setTimeout(() => btn.innerText = "📋", 1000);
+        btn.innerHTML = '<span style="font-size: 16px;">✔</span>'; // temporary feedback
+        setTimeout(() => {
+          btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>';
+        }, 1000);
       }).catch(err => {
         console.error("Failed to copy: ", err);
       });
