@@ -176,6 +176,7 @@ body {
   align-self: flex-start;
 }
 .projects-title { margin-bottom: 10px; }
+.project.wide { flex: 1 1 100%; } /* full-width card (Minecraft invite) */
 
 /* timeline */
 .timeline .time-item {
