@@ -199,6 +199,7 @@ body {
   font-size: 0.9rem;
 }
 .time-right h4 { margin-bottom: 6px; }
+.time-right .loc { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
 
 /* contact */
 .contact-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
