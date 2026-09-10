@@ -51,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding-top: 18px; /* align photo top with the summary card's top edge (cards have margin-top: 18px) */
 }
 
 .hero-right {
@@ -58,7 +59,7 @@ body {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 0; /* card margins (18px) provide the same spacing as the rest of the site */
 }
 
 .infra-snapshot {
@@ -184,7 +185,13 @@ body {
   border-top: 1px dashed rgba(255,255,255,0.08);
 }
 .timeline .time-item:first-of-type { border-top: 0; }
-.time-left { width: 120px; color: var(--muted); font-size: 0.9rem; }
+.time-left {
+  width: 150px;
+  flex-shrink: 0;
+  white-space: nowrap; /* keep dates like "Dec 2025 — Present" on one line */
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 .time-right h4 { margin-bottom: 6px; }
 
 /* contact */
@@ -208,6 +215,12 @@ body {
 /* responsive */
 @media (max-width: 768px) {
   .hero { flex-direction: column; }
-  .hero-left { max-width: 100%; margin-bottom: 0px;}
+  .hero-left { max-width: 100%; margin-bottom: 0px; padding-top: 0; }
   .hero-right { flex-direction: column; justify-content: center; max-width: 100%; margin-top: 0px; gap: 0px; }
+}
+
+@media (max-width: 480px) {
+  /* stack date above role so narrow screens don't squeeze the text */
+  .time-item { flex-direction: column; gap: 2px; }
+  .time-left { width: auto; }
 }
