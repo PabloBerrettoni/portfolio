@@ -59,7 +59,8 @@ body {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0; /* card margins (18px) provide the same spacing as the rest of the site */
+  gap: 0;
+  justify-content: space-between; /* cards span the full hero height: summary top, terminal bottom */
 }
 
 .infra-snapshot {
