@@ -63,6 +63,10 @@ body {
   justify-content: space-between; /* cards span the full hero height: summary top, terminal bottom */
 }
 
+/* the last card must sit flush with the bottom of the stretched column,
+   otherwise its own 18px margin leaves a gap under it */
+.hero-right > .card:last-child { margin-bottom: 0; }
+
 .infra-snapshot {
   position: relative; /* needed for absolute positioning of the button */
 }
